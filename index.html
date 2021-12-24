@@ -3,22 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>IP Address Tracker</title>
 </head>
 <body>
+  <main>
+    <div class="header">
+      <h1>IP Address Tracker</h1>
+      <div class="searchBlock">
+        <input type="text" id="ipAddressInput" name="ipAddressInput" placeholder="Search for any IP address or domain">
+        <p class="searchBtn">></p>
+      </div>
+      <div class="infosBlock">
+        <div class="block">
+          <h2 class="infoTitle">IP ADDRESS</h2>
+          <p class="info">-</p>
+        </div>
+        <div class="block">
+          <h2 class="infoTitle">LOCATION</h2>
+          <p class="info">-</p>
+        </div>
+        <div class="block">
+          <h2 class="infoTitle">TIMEZONE</h2>
+          <p class="info">-</p>
+        </div>
+        <div class="block">
+          <h2 class="infoTitle">ISP</h2>
+          <p class="info">-</p>
+        </div>
+      </div>
+    </div>
+    <div id="map">
+    </div>
+  </main>
 
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-    <script src="script.js"></script>
+  
+  
+    
+  <script src="leaflet/leaflet.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,101 @@
+$mainFont: 'Rubik', sans-serif;
+
+$veryDarkGray: hsl(0, 0%, 17%);
+$darkGray: hsl(0, 0%, 59%);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $mainFont;
+}
+
+.header {
+    background: no-repeat url('./images/pattern-bg.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    position: relative;
+    h1 {
+        color: white;
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .searchBlock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        #ipAddressInput {
+            padding: 25px;
+            border-radius: 15px 0 0 15px;
+            border: none;
+            width: 50%;
+            max-width: 350px;
+            height: 10px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .searchBtn {
+            background: $veryDarkGray;
+            color: white;
+            padding: 19px;
+            border: none;
+            border-radius: 0 15px 15px 0;
+            font-size: 19px;
+            font-weight: 500;
+            width: 10px;
+        }
+    }
+}
+.infosBlock {
+    background: white;
+    border-radius: 20px;
+    padding-top: 20px;
+    width: 85%;
+    max-width: 370px;
+    position: absolute;
+    left: 50%;
+    bottom: -50%;
+    transform: translate(-50%, 30%);
+    z-index: 2;
+    .block {
+        margin-bottom: 20px;
+        h2 {
+            font-size: 0.7em;
+            text-align: center;
+            color: $darkGray;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .info {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+    }
+}
+#map {
+    height: 81vh;
+    z-index: 1;
+}
+
+@media screen and (min-width: 900px) {
+    .infosBlock {
+        max-width: 75%;
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 40px 10px 40px;
+        bottom: -30%;
+        transform: translate(-50%, 0);
+        height: 75px;
+    }
+}
